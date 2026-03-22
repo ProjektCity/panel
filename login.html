@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://projektcity.com/assets/images/logos/favicon-f.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Projekt City Panel</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://static.projektcity.com/fonts/font-awesome-6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/footer.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/header.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/variables.css">
+</head>
+<body class="login-page">
+    <div class="login-card">
+        <div class="login-logo">Projekt City <span>Panel</span></div>
+        <p class="login-subtitle">Log into the Projekt City Panel</p>
+        <div id="login-error" class="login-error" role="alert"></div>
+        <form id="login-form" novalidate>
+            <div class="form-group">
+                <label class="form-label" for="login-email">Email</label>
+                <input type="email" id="login-email" class="form-input" placeholder="you@projektcity.com" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="login-password">Password</label>
+                <input type="password" id="login-password" class="form-input" placeholder="••••••••" autocomplete="current-password" required>
+            </div>
+            <button type="submit" id="login-btn" class="btn btn-primary login-btn">Sign In</button>
+        </form>
+    </div>
+    <script src="/assets/api.js"></script>
+    <script src="/assets/auth.js"></script>
+    <script src="/assets/ui.js"></script>
+    <script src="/assets/app.js"></script>
+</body>
+</html>

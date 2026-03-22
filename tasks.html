@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://projektcity.com/assets/images/logos/favicon-f.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Projekt City Panel</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://static.projektcity.com/fonts/font-awesome-6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/footer.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/header.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/variables.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <div class="page-header">
+                <h1>Tasks</h1>
+                <p>Manage and track development tasks across all versions.</p>
+            </div>
+            <div class="tasks-toolbar">
+                <div id="version-tabs"></div>
+                <button id="create-task-btn" class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Task</button>
+            </div>
+            <div class="kanban-board">
+                <div id="col-todo" class="kanban-col col-todo" data-status="todo">
+                    <div class="col-header">
+                        <span class="col-title"><i class="fa-regular fa-circle"></i> To Do</span>
+                        <span class="col-count">0</span>
+                    </div>
+                    <div class="task-list"></div>
+                </div>
+                <div id="col-doing" class="kanban-col col-doing" data-status="doing">
+                    <div class="col-header">
+                        <span class="col-title"><i class="fa-solid fa-circle-half-stroke"></i> In Progress</span>
+                        <span class="col-count">0</span>
+                    </div>
+                    <div class="task-list"></div>
+                </div>
+                <div id="col-done" class="kanban-col col-done" data-status="done">
+                    <div class="col-header">
+                        <span class="col-title"><i class="fa-solid fa-circle-check"></i> Done</span>
+                        <span class="col-count">0</span>
+                    </div>
+                    <div class="task-list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal">
+            <div id="modal-title" class="modal-title"></div>
+            <div id="modal-body" class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="modal-cancel" class="btn btn-ghost">Cancel</button>
+                <button id="modal-confirm" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/api.js"></script>
+    <script src="/assets/auth.js"></script>
+    <script src="/assets/ui.js"></script>
+    <script src="/assets/app.js"></script>
+    <script src="/assets/footer.js"></script>
+    <script src="/assets/header.js"></script>
+</body>
+</html>

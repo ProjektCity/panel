@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://projektcity.com/assets/images/logos/favicon-f.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox - Projekt City Panel</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://static.projektcity.com/fonts/font-awesome-6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/footer.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/header.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/variables.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <div class="page-header">
+                <h1>Inbox</h1>
+                <p>Form submissions from Supabase - mark done, delete or convert to tasks.</p>
+            </div>
+            <div class="inbox-toolbar">
+                <div class="inbox-stats">
+                    <div class="inbox-stat">Total <strong id="inbox-total">-</strong></div>
+                    <div class="inbox-stat">Open <strong id="inbox-open">-</strong></div>
+                    <div class="inbox-stat">Done <strong id="inbox-done">-</strong></div>
+                </div>
+                <div class="inbox-controls">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="filter-done"> Show completed
+                    </label>
+                    <button id="refresh-btn" class="btn btn-outline btn-sm">
+                        <i class="fa-solid fa-rotate-right"></i> Refresh
+                    </button>
+                </div>
+            </div>
+            <div id="inbox-list">
+                <div class="loading-pulse">Fetching submissions…</div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal">
+            <div id="modal-title" class="modal-title"></div>
+            <div id="modal-body" class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="modal-cancel" class="btn btn-ghost">Cancel</button>
+                <button id="modal-confirm" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/api.js"></script>
+    <script src="/assets/auth.js"></script>
+    <script src="/assets/ui.js"></script>
+    <script src="/assets/app.js"></script>
+    <script src="/assets/footer.js"></script>
+    <script src="/assets/header.js"></script>
+</body>
+</html>

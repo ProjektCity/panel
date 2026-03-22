@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link rel="icon" href="https://projektcity.com/assets/images/logos/favicon-f.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Changelog - Projekt City Panel</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap">
+	<link rel="stylesheet" href="https://static.projektcity.com/fonts/font-awesome-6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/footer.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/header.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://projektcity.com/assets/global/variables.css">
+</head>
+<body>
+	<header></header>
+	<main>
+		<section style="height: 100%;">
+			<div class="page-header">
+                <h1>Changelog</h1>
+                <p>Enter new changes below. The changes will be saved automatically. To ensure proper formatting, please use the toolbar buttons and check the output.</p>
+            </div>
+			<div class="cl-page">
+				<div class="cl-toolbar">
+					<div class="tb-group">
+						<button id="tb-strong" class="tb-btn" title="Bold"><i class="fa-solid fa-bold"></i></button>
+						<button id="tb-em"     class="tb-btn" title="Italic"><i class="fa-solid fa-italic"></i></button>
+						<button id="tb-u"      class="tb-btn" title="Underline"><i class="fa-solid fa-underline"></i></button>
+					</div>
+					<div class="tb-sep"></div>
+					<div class="tb-group">
+						<button id="tb-h1" class="tb-btn" title="Heading 1">H1</button>
+						<button id="tb-h2" class="tb-btn" title="Heading 2">H2</button>
+						<button id="tb-h3" class="tb-btn" title="Heading 3">H3</button>
+						<button id="tb-p"  class="tb-btn" title="Paragraph">P</button>
+					</div>
+					<div class="tb-sep"></div>
+					<div class="tb-group">
+						<button id="tb-ul" class="tb-btn" title="Unordered list"><i class="fa-solid fa-list-ul"></i></button>
+						<button id="tb-ol" class="tb-btn" title="Ordered list"><i class="fa-solid fa-list-ol"></i></button>
+						<button id="tb-li" class="tb-btn" title="List item">LI</button>
+					</div>
+					<div class="tb-sep"></div>
+					<div class="tb-group">
+						<button id="tb-code" class="tb-btn" title="Inline code"><i class="fa-solid fa-code"></i></button>
+						<button id="tb-pre"  class="tb-btn" title="Code block"><i class="fa-solid fa-file-code"></i></button>
+						<button id="tb-a"    class="tb-btn" title="Link"><i class="fa-solid fa-link"></i></button>
+					</div>
+					<div class="tb-sep"></div>
+					<div class="tb-group">
+						<button id="tb-hr"   class="tb-btn" title="Horizontal rule">HR</button>
+						<button id="tb-br"   class="tb-btn" title="Line break">BR</button>
+						<button id="tb-span" class="tb-btn" title="Span">span</button>
+						<button id="tb-div"  class="tb-btn" title="Div">div</button>
+					</div>
+					<div class="tb-spacer"></div>
+					<div class="tb-group" style="gap:6px;">
+						<span id="cl-status" class="cl-status-text"></span>
+						<button id="cl-export-btn" class="btn btn-outline btn-sm">
+							<i class="fa-solid fa-file-export"></i> Export
+						</button>
+						<button id="cl-save-btn" class="btn btn-primary btn-sm">
+							<i class="fa-solid fa-floppy-disk"></i> Save
+						</button>
+					</div>
+				</div>
+				<div class="cl-body">
+					<textarea
+						id="cl-editor"
+						class="cl-editor"
+						placeholder="Write your changelog HTML here…"
+						spellcheck="false"
+					></textarea>
+					<div id="cl-preview" class="cl-preview loading" aria-label="Live preview" aria-live="polite"></div>
+					<span class="cl-divider-label">preview</span>
+				</div>
+
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+	<div id="modal-overlay" class="modal-overlay">
+		<div class="modal">
+			<div id="modal-title" class="modal-title"></div>
+			<div id="modal-body"  class="modal-body"></div>
+			<div class="modal-footer">
+				<button id="modal-cancel"  class="btn btn-ghost">Cancel</button>
+				<button id="modal-confirm" class="btn btn-primary">Confirm</button>
+			</div>
+		</div>
+	</div>
+	<script src="/assets/api.js"></script>
+	<script src="/assets/app.js"></script>
+	<script src="/assets/auth.js"></script>
+	<script src="/assets/changelog.js"></script>
+	<script src="/assets/footer.js"></script>
+	<script src="/assets/header.js"></script>
+	<script src="/assets/ui.js"></script>
+</body>
+</html>
