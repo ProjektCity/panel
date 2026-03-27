@@ -16,6 +16,21 @@
 	margin-top: 4px;
 }
 
+.header-logo {
+	min-height: 50px;
+	max-height: 50px;
+	min-width: 50px;
+	max-width: 50px;
+}
+
+.panel-name {
+	font-size: 24px;
+}
+
+.customwidth {
+	width: 25%;
+}
+
 .header-user-email {
 	font-size: 0.78rem;
 	font-weight: 300;
@@ -193,18 +208,17 @@
 .btn {
 	display: inline-flex;
 	align-items: center;
+	border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
 	gap: 6px;
 	padding: 8px 18px;
-	border: none;
-	border-radius: 6px;
-	cursor: pointer;
 	transition: var(--transition);
 	white-space: nowrap;
 	text-decoration: none;
 }
 
 .btn span,
-.btn i,
 .btn a,
 .btn p {
 	font-family: 'Poppins', sans-serif;
@@ -227,6 +241,7 @@
 
 .btn-primary {
 	background: var(--accent);
+	border: none;
 	color: #fff;
 }
 
@@ -276,6 +291,7 @@
 
 .btn-ghost {
 	background: transparent;
+	border: none;
 	color: var(--text-lightgray);
 }
 
@@ -383,10 +399,7 @@
 
 .form-input {
 	width: 100%;
-	background: var(--surface3);
-	border: 1px solid rgba(50, 51, 60, 0.8);
 	border-radius: 6px;
-	color: var(--text);
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 0.875rem;
@@ -395,9 +408,17 @@
 	outline: none;
 }
 
+
+.form-input {
+	background: transparent;
+	border: 1px solid var(--fill-white);
+	color: var(--text-lightgray);
+}
+
 .form-input:focus {
-	border-color: var(--accent);
-	box-shadow: 0 0 0 3px var(--accent-glow);
+	border-color: var(--fill-white);
+	
+	box-shadow: 0 0 0px 3px rgba(152, 152, 152, 0.18);;
 }
 
 .form-input::placeholder {
@@ -626,18 +647,14 @@
 }
 
 .login-logo {
-	font-size: 1.25rem;
+	font-size: 24px;
 	font-weight: 600;
 	color: var(--text);
 	margin-bottom: 4px;
 }
 
-.login-logo span {
-	color: var(--accent);
-}
-
 .login-subtitle {
-	color: var(--text-gray);
+	color: var(--text-lightgray);
 	font-size: 0.82rem;
 	font-weight: 300;
 	margin-bottom: 24px;
@@ -672,6 +689,7 @@
 }
 
 .login-btn {
+	background-color: var(--fill-white);
 	width: 100%;
 	justify-content: center;
 	padding: 11px;
@@ -1388,7 +1406,25 @@ main>section {
 	font-size: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+	.panel-name, .panel-name span {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 798px) {
+	.hideonmobile {
+		width: 0px !important;
+	}
+
+	.customwidth {
+		width: 50%;
+	}
+
+	.panel-name, .panel-name span {
+		font-size: 22px;
+	}
+
 	.cl-body {
 		grid-template-columns: 1fr;
 		height: auto;
